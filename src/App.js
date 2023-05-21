@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+//Checking react-icons 
+//import { FaReact } from 'react-icons/fa';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//use case of components/index.js
+import {Calltoaction,Brand,Navbar} from './components';
+import {Footer, Blog,Possibility,Features, Whatgpt,Header} from './containers'
+
+//all css from App.css will be applied to App.js components
+import './App.css'
+
+const App = () =>{
+    return(
+        
+        <div className="App">        
+        {/* <FaReact size={30} />*/}
+            <div className="gradient__bg">
+                <Navbar/>
+                <Header/>
+
+            </div>
+            <div>
+                <Brand/>
+                <Whatgpt/>
+                <Features/>
+                <Possibility/>
+                <Calltoaction/>
+                <Blog/>
+                <Footer/>            
+            </div>
+        </div>
+        
+        )
 }
 
 export default App;

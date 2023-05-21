@@ -1,13 +1,19 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+/*@import - to  importing a font from (external file) Google Fonts using the URL */
+:root {
+  --font-family: 'Manrope', sans-serif;
+/*
+    linear-gradient: This is a CSS function that generates a linear gradient.
+    89.97deg: Specifies the angle of the gradient. In this case, the gradient is angled at 89.97 degrees.
+    #AE67FA 1.84%: Represents the starting color of the gradient (#AE67FA) and the position where it starts (1.84%). The color stop defines the color and position along the gradient line.
+    #F49867 102.67%: Represents the ending color of the gradient (#F49867) and the position where it ends (102.67%).
+*/
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
 }
