@@ -13,6 +13,7 @@ Fundamental CSS properties to master flex & grid
 Fundamentals of the CSS BEM Model
 From soft and pleasant animations to complex gradients
 Perfectly placed media queries for satisfactory responsiveness covering almost devices
+Built from figma design
 
 ## Technologies Used
 
@@ -20,5 +21,4 @@ Perfectly placed media queries for satisfactory responsiveness covering almost d
 - CSS3
 - JavaScript
 - React.js
-- UI/UX design tools (e.g., Figma, Sketch, Adobe XD)
 - Version control (e.g., Git)
