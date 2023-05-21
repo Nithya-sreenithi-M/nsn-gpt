@@ -1,0 +1,202 @@
+/*OUTER MOST DIV*/
+.gpt3__header{
+    display: flex;
+
+}
+
+/*This div Contains entire header section*/
+
+/*
+https://youtu.be/phWxA89Dy94
+In CSS, flex: 1; is a shorthand property that sets three individual properties for flexbox elements: flex-grow, flex-shrink, and flex-basis. Let's break down what each property does:
+
+    flex-grow: Specifies the flex grow factor of a flex item. It determines how much the flex item can grow relative to the other flex items within the same flex container. When set to 1, it means the flex item can grow and occupy any available space along the main axis.
+
+    flex-shrink: Specifies the flex shrink factor of a flex item. It determines how much the flex item can shrink relative to the other flex items within the same flex container when there is not enough space. When set to 1, it means the flex item can shrink proportionally with other flex items.
+
+    flex-basis: Specifies the initial size of a flex item before any available space is distributed. It defines the default size of the flex item along the main axis. When set to 0, it means the flex item starts with a size of zero along the main axis.
+
+So, flex: 1; is a shorthand that sets flex-grow: 1;, flex-shrink: 1;, and flex-basis: 0;. It allows the flex item to grow and shrink equally with other flex items and start with a size of zero along the main axis, taking up any available space.*/
+.gpt3__header-content{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+/*gpt3__header-content div has h1 and p*/
+.gpt3__header-content h1{
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em; 
+    /*copy the code from figma. Don't copy position codes as we using flex to do position*/
+}
+/*Now heading looks good. When we bring ai image to right then the h1 will adjust to 3 lines*/
+
+
+.gpt3__header-content p{
+font-family: var(--font-family);
+/*font-style: normal; - by default its normal   */
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+
+color: var(--color-text);
+margin-top:1.5rem;
+}
+
+/*E-mail and button section*/
+.gpt3__header-content__input {
+    width: 100%;
+    margin: 2rem 0 1rem; /*top left bottom*/
+    display: flex;
+
+}
+
+.gpt3__header-content__input input{
+    /*figma rectangle*/
+    /*figma input inner text*/
+    background: var(--color-footer ); /*#031B34*/
+    border-color: black;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    border: 2px solid #052D56;
+    padding: 0 1rem;
+    outline: none;
+    color: #fff;/*#3D6184*/
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /*flex: 2 for more width space*/
+
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+    
+}
+
+/*when button is corrected text box width will be adjusted*/
+.gpt3__header-content__input button{
+    /*copy button - outer style*/
+    flex: 0.6;
+    background: #FF4820;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+     /*copy button text - inner style*/
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+    width:100%;
+    min-height: 50px;
+    cursor: pointer;
+    outline: none;
+    padding: 0 1rem;
+    /*padding affected the get startec text*/ 
+    border: none;   
+}
+/*Image and p*/
+.gpt3__header-content__people{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2rem;
+}
+.gpt3__header-content__people img{
+    width: 181.79px;
+    height: 38px; 
+}
+
+.gpt3__header-content__people p{
+    margin-left: 1rem ;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    width: 581.92px;
+    height: 37.61px;
+    /*the text starts little below - this due to margin*/
+    margin-top: 0;
+    text-align: left;
+}
+/*div containing ai image*/
+.gpt3__header-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gpt3__header-image img{
+    width: 100%;
+    height: 100%;
+    /*still image not on right. Lets make it responsive and get back here*/
+}
+
+/*Responsive design*/
+
+@media screen and (max-width: 1050px) {
+    .gpt3__header{
+        flex-direction: column;
+        /*because row will be congesting*/
+    }
+
+    .gpt3__header-content{
+        margin: 0 0 3rem;
+    }
+}
+
+/*reducing h1, p, people div from row to column,input and button inner text size small*/
+@media screen and (max-width: 750px) {
+    .gpt3__header h1{
+        font-size: 48px;
+        line-height:60px ;
+    }
+
+    .gpt3__header p{
+        font-size: 16px;
+        line-height:24px ;
+    }
+    .gpt3__header-content__people{
+        flex-direction: column;
+    }
+
+    .gpt3__header-content__people p{
+        margin: 0;
+        text-align: center;
+    }
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button{
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .gpt3__header h1{
+        font-size: 36px;
+        line-height:48px ;
+    }
+
+    .gpt3__header p{
+        font-size: 14px;
+        line-height:24px ;
+    }
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+}
