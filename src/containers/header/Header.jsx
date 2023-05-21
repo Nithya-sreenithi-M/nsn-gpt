@@ -7,8 +7,8 @@ import './header.css'
 const Header = () => {
     return (
       /* id="home" helps us to navigate to the section using navbar home */
-      <div className="gpt3_header section__padding" id="home">
-        <div className="gpt3__header-content">
+      <div className="gpt3__header section__padding" id="home">
+        <div className="gpt3__header-content" >{/*header right*/}
             <h1 className="gradient__text">
             Let’s Build Something amazing with GPT-3 OpenAI
             </h1>
@@ -23,9 +23,15 @@ const Header = () => {
                 <img src={people}/>
                 <p>1,600 people requested access a visit in last 24 hours</p>
             </div>
-            <div className="gpt3__header-image">
+            {/*
+              gpt3__header-content - class has flex-direction: column thats why image is not on right side
+              move this to div gpt3__header class -where flex has default row direction.
+              <div className="gpt3__header-image">
                 <img src={ai} alt="ai" />
-            </div>
+            </div>*/}
+        </div>
+        <div className="gpt3__header-image">{/*header left*/}
+                <img src={ai} alt="ai" />
         </div>
       </div>
     );
