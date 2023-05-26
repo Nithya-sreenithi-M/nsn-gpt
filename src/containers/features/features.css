@@ -1,6 +1,4 @@
-
-/*
-.gpt3__features {
+.gpt3__features  {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -24,6 +22,7 @@
     font-weight: 800;
     font-family: var(--font-family);
 }
+
 
 .gpt3__features-heading p {
     color: var(--color-subtext);
@@ -59,4 +58,14 @@
         font-size: 28px;
         line-height: 38px;
     }
+}
+/*
+
+
+
+
+
+
+
+
 }*/
