@@ -41,8 +41,8 @@ const Navbar = () =>{
                     <p><a href="#home">Home</a></p>
                     <p><a href="#whgpt3">What is GPT</a></p>
                     <p><a href="#possibility">Open AI</a></p>
-                    <p><a href="#home">Case studies</a></p>
-                    <p><a href="#home">Library</a></p>
+                    <p><a href="#blog">Case studies</a></p>
+                    <p><a href="#footer">Library</a></p>
                 </div> 
                 
             </div>
